@@ -16,8 +16,12 @@ public class Main {
         }
 
         System.out.println();
-        System.out.print("Минимальный элемент массива: ");
+        System.out.print("Минимальный элемент массива For: ");
         WorkingWithArray.getMin(number);
+
+        System.out.println();
+        System.out.print("Минимальный элемент массива ForEach: ");
+        WorkingWithArray.getMinForEach(number);
 
         System.out.println();
         System.out.println();
@@ -29,17 +33,35 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("Четные элементы массива: ");
+        System.out.println("Четные элементы массива For: ");
         WorkingWithArray.getEven(evenElementInArrays);
 
         System.out.println();
+        System.out.println("Четные элементы массива ForEach: ");
+        WorkingWithArray.getEvenForEach(evenElementInArrays);
+
+        System.out.println();
         System.out.println();
 
-        System.out.println("Весь массив объектов класса User:");
+        System.out.println("Весь массив объектов класса User:(For)");
         WorkingWithArray.showArray(users);
 
         System.out.println();
-        System.out.println("Массив со всеми объектами, после работы метода searchByName:");
+
+        System.out.println("Весь массив объектов класса User(ForEach):");
+        WorkingWithArray.showArrayForEach(users);
+
+        System.out.println();
+        System.out.println("Массив со всеми объектами, после работы метода searchByName(For):");
         WorkingWithArray.showArray(WorkingWithArray.searchByName(users, "Andrew"));
+
+        System.out.println();
+        User[] arr = WorkingWithArray.searchByNameForEach(users, "Andrew");
+        System.out.println("Массив со всеми объектами, после работы метода searchByName(ForEach):");
+        WorkingWithArray.showArrayForEach(arr);
+
+        System.out.println();
+        System.out.println("Массив со всеми объектами, после работы метода searchByName(ForEach) другая строка(Viktor):");
+        WorkingWithArray.showArrayForEach(WorkingWithArray.searchByNameForEach(users, "Viktor"));
     }
 }
